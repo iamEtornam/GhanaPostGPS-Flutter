@@ -16,8 +16,7 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text(
           'GhanaPost',
-          style:
-              TextStyle(color: _mainColor, fontWeight: FontWeight.bold),
+          style: TextStyle(color: _mainColor, fontWeight: FontWeight.bold),
         ),
         iconTheme: IconThemeData(color: _mainColor),
         bottom: PreferredSize(
