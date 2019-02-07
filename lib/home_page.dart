@@ -7,6 +7,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   TextEditingController _controller = TextEditingController();
+  Color _mainColor = Color(0xff0677BD);
 
   @override
   Widget build(BuildContext context) {
@@ -16,9 +17,9 @@ class _HomePageState extends State<HomePage> {
         title: Text(
           'GhanaPost',
           style:
-              TextStyle(color: Colors.blueAccent, fontWeight: FontWeight.bold),
+              TextStyle(color: _mainColor, fontWeight: FontWeight.bold),
         ),
-        iconTheme: IconThemeData(color: Colors.blueAccent),
+        iconTheme: IconThemeData(color: _mainColor),
         bottom: PreferredSize(
             child: Container(
               margin: EdgeInsets.all(15.0),
@@ -92,7 +93,7 @@ class _HomePageState extends State<HomePage> {
                             ),
                             InkWell(
                                 child: Material(
-                              color: Colors.blueAccent,
+                              color: _mainColor,
                               borderRadius: BorderRadius.circular(20.0),
                               elevation: 3.0,
                               child: Container(
@@ -152,7 +153,7 @@ class _HomePageState extends State<HomePage> {
                             ),
                             InkWell(
                                 child: Material(
-                              color: Colors.blueAccent,
+                              color: _mainColor,
                               borderRadius: BorderRadius.circular(20.0),
                               elevation: 3.0,
                               child: Container(
@@ -212,7 +213,7 @@ class _HomePageState extends State<HomePage> {
                             ),
                             InkWell(
                                 child: Material(
-                              color: Colors.blueAccent,
+                              color: _mainColor,
                               borderRadius: BorderRadius.circular(20.0),
                               elevation: 3.0,
                               child: Container(
@@ -260,7 +261,7 @@ class _HomePageState extends State<HomePage> {
                         subtitle: Text('Madina Lane 5'),
                         trailing: InkWell(
                             child: Material(
-                          color: Colors.blueAccent,
+                          color: _mainColor,
                           borderRadius: BorderRadius.circular(20.0),
                           elevation: 3.0,
                           child: Container(
@@ -289,7 +290,7 @@ class _HomePageState extends State<HomePage> {
                         subtitle: Text('Osu Oxford Street'),
                         trailing: InkWell(
                             child: Material(
-                          color: Colors.blueAccent,
+                          color: _mainColor,
                           borderRadius: BorderRadius.circular(20.0),
                           elevation: 3.0,
                           child: Container(
@@ -318,7 +319,7 @@ class _HomePageState extends State<HomePage> {
                         subtitle: Text('Saltpond'),
                         trailing: InkWell(
                             child: Material(
-                          color: Colors.blueAccent,
+                          color: _mainColor,
                           borderRadius: BorderRadius.circular(20.0),
                           elevation: 3.0,
                           child: Container(
@@ -348,7 +349,7 @@ class _HomePageState extends State<HomePage> {
                             Text('ICGC Holy Ghost Temple, Adenta Fafraha'),
                         trailing: InkWell(
                             child: Material(
-                          color: Colors.blueAccent,
+                          color: _mainColor,
                           borderRadius: BorderRadius.circular(20.0),
                           elevation: 4.0,
                           child: Container(
@@ -377,7 +378,7 @@ class _HomePageState extends State<HomePage> {
                         subtitle: Text('Koforidua, galaway'),
                         trailing: InkWell(
                             child: Material(
-                          color: Colors.blueAccent,
+                          color: _mainColor,
                           borderRadius: BorderRadius.circular(20.0),
                           elevation: 4.0,
                           child: Container(
