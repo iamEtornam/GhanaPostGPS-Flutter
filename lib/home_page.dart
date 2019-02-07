@@ -7,15 +7,6 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   TextEditingController _controller = TextEditingController();
-  int index = 0;
-  List itemList = [
-    ["Home", "Madina Lane 5", "GM-342-18"],
-    ["Home", "Madina Lane 5", "GM-342-18"],
-    ["Home", "Madina Lane 5", "GM-342-18"],
-    ["Home", "Madina Lane 5", "GM-342-18"],
-    ["Home", "Madina Lane 5", "GM-342-18"],
-    ["Home", "Madina Lane 5", "GM-342-18"]
-  ];
 
   @override
   Widget build(BuildContext context) {
@@ -410,7 +401,6 @@ class _HomePageState extends State<HomePage> {
             );
           }),
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: index,
         items: [
           BottomNavigationBarItem(
               icon: Icon(
