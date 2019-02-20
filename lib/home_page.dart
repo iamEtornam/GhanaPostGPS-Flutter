@@ -53,127 +53,132 @@ class _HomePageState extends State<HomePage> {
                     child: ListView(
                       scrollDirection: Axis.horizontal,
                       children: <Widget>[
-                        Container(
-                          width: 150.0,
-                          height: 150.0,
-                          margin: EdgeInsets.fromLTRB(10.0, 15.0, 5.0, 15.0),
-                          decoration: BoxDecoration(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(5.0)),
-                              color: Colors.white),
-                          child: Column(
-                            children: <Widget>[
-                              SizedBox(
-                                height: 10.0,
-                              ),
-                              Container(
-                                width: 50.0,
-                                height: 50.0,
-                                decoration: BoxDecoration(
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(45.0)),
-                                    color: Colors.grey.shade200),
-                                child: Image.network(""),
-                              ),
-                              SizedBox(
-                                height: 5.0,
-                              ),
-                              Text(
-                                'Police Service',
-                                style: TextStyle(fontWeight: FontWeight.bold),
-                              ),
-                              SizedBox(
-                                height: 5.0,
-                              ),
-                              Divider(
-                                color: Colors.grey,
-                              ),
-                              SizedBox(
-                                height: 5.0,
-                              ),
-                              InkWell(
-                                  child: Material(
-                                color: _mainColor,
-                                borderRadius: BorderRadius.circular(20.0),
-                                elevation: 3.0,
-                                child: Container(
-                                    margin: EdgeInsets.fromLTRB(
-                                        15.0, 0.0, 15.0, 0.0),
-                                    height: 30.0,
-                                    width: 100.0,
-                                    child: Align(
-                                      alignment: Alignment.center,
-                                      child: Text(
-                                        'Send Location',
-                                        softWrap: true,
-                                        style: TextStyle(color: Colors.white),
-                                      ),
-                                    )),
-                              )),
-                            ],
+                        Expanded(
+                          child: Container(
+                            width: 150.0,
+                            height: 150.0,
+                            margin: EdgeInsets.fromLTRB(10.0, 15.0, 5.0, 15.0),
+                            decoration: BoxDecoration(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(5.0)),
+                                color: Colors.white),
+                            child: Column(
+                              children: <Widget>[
+                                SizedBox(
+                                  height: 10.0,
+                                ),
+                                Container(
+                                  width: 50.0,
+                                  height: 50.0,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(45.0)),
+                                      color: Colors.grey.shade200),
+                                  child: Image.network(""),
+                                ),
+                                SizedBox(
+                                  height: 5.0,
+                                ),
+                                Text(
+                                  'Police Service',
+                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                ),
+                                SizedBox(
+                                  height: 5.0,
+                                ),
+                                Divider(
+                                  color: Colors.grey,
+                                ),
+                                SizedBox(
+                                  height: 5.0,
+                                ),
+                                InkWell(
+                                    child: Material(
+                                  color: _mainColor,
+                                  borderRadius: BorderRadius.circular(20.0),
+                                  elevation: 3.0,
+                                  child: Container(
+                                      margin: EdgeInsets.fromLTRB(
+                                          15.0, 0.0, 15.0, 0.0),
+                                      height: 30.0,
+                                      width: 100.0,
+                                      child: Align(
+                                        alignment: Alignment.center,
+                                        child: Text(
+                                          'Send Location',
+                                          softWrap: true,
+                                          style: TextStyle(color: Colors.white),
+                                        ),
+                                      )),
+                                )),
+                              ],
+                            ),
                           ),
                         ),
-                        Container(
-                          width: 150.0,
-                          height: 150.0,
-                          margin: EdgeInsets.fromLTRB(10.0, 15.0, 5.0, 15.0),
-                          decoration: BoxDecoration(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(5.0)),
-                              color: Colors.white),
-                          child: Column(
-                            children: <Widget>[
-                              SizedBox(
-                                height: 10.0,
-                              ),
-                              Container(
-                                width: 50.0,
-                                height: 50.0,
-                                decoration: BoxDecoration(
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(45.0)),
-                                    color: Colors.grey.shade200),
-                                child: Image.network(""),
-                              ),
-                              SizedBox(
-                                height: 5.0,
-                              ),
-                              Text(
-                                'Fire Service',
-                                style: TextStyle(fontWeight: FontWeight.bold),
-                              ),
-                              SizedBox(
-                                height: 5.0,
-                              ),
-                              Divider(
-                                color: Colors.grey,
-                              ),
-                              SizedBox(
-                                height: 5.0,
-                              ),
-                              InkWell(
-                                  child: Material(
-                                color: _mainColor,
-                                borderRadius: BorderRadius.circular(20.0),
-                                elevation: 3.0,
-                                child: Container(
-                                    margin: EdgeInsets.fromLTRB(
-                                        15.0, 0.0, 15.0, 0.0),
-                                    height: 30.0,
-                                    width: 100.0,
-                                    child: Align(
-                                      alignment: Alignment.center,
-                                      child: Text(
-                                        'Send Location',
-                                        softWrap: true,
-                                        style: TextStyle(color: Colors.white),
-                                      ),
-                                    )),
-                              )),
-                            ],
+                        Expanded(
+                          child: Container(
+                            width: 150.0,
+                            height: 150.0,
+                            margin: EdgeInsets.fromLTRB(10.0, 15.0, 5.0, 15.0),
+                            decoration: BoxDecoration(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(5.0)),
+                                color: Colors.white),
+                            child: Column(
+                              children: <Widget>[
+                                SizedBox(
+                                  height: 10.0,
+                                ),
+                                Container(
+                                  width: 50.0,
+                                  height: 50.0,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(45.0)),
+                                      color: Colors.grey.shade200),
+                                  child: Image.network(""),
+                                ),
+                                SizedBox(
+                                  height: 5.0,
+                                ),
+                                Text(
+                                  'Fire Service',
+                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                ),
+                                SizedBox(
+                                  height: 5.0,
+                                ),
+                                Divider(
+                                  color: Colors.grey,
+                                ),
+                                SizedBox(
+                                  height: 5.0,
+                                ),
+                                InkWell(
+                                    child: Material(
+                                  color: _mainColor,
+                                  borderRadius: BorderRadius.circular(20.0),
+                                  elevation: 3.0,
+                                  child: Container(
+                                      margin: EdgeInsets.fromLTRB(
+                                          15.0, 0.0, 15.0, 0.0),
+                                      height: 30.0,
+                                      width: 100.0,
+                                      child: Align(
+                                        alignment: Alignment.center,
+                                        child: Text(
+                                          'Send Location',
+                                          softWrap: true,
+                                          style: TextStyle(color: Colors.white),
+                                        ),
+                                      )),
+                                )),
+                              ],
+                            ),
                           ),
                         ),
-                        Container(
+                        Expanded(
+                            child: Container(
                           width: 150.0,
                           height: 150.0,
                           margin: EdgeInsets.fromLTRB(10.0, 15.0, 5.0, 15.0),
@@ -232,7 +237,7 @@ class _HomePageState extends State<HomePage> {
                               )),
                             ],
                           ),
-                        )
+                        ))
                       ],
                     ),
                   ),
