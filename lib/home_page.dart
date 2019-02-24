@@ -8,6 +8,14 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   TextEditingController _controller = TextEditingController();
   Color _mainColor = Color(0xff0677BD);
+  List<String> _serviceName = ['Police', 'Fire', 'Ambulance'];
+  var _addressDetails = [
+    ['Home', 'Madina Lane 5', 'GM-342-18'],
+    ['Office', 'Osu Oxford Street', 'GO-832-18'],
+    ['Hometown', 'Saltpond', 'GS-43842-18'],
+    ['Church', 'ICGC Holy Ghost Temple, Adenta Fafraha', 'GA-11d42-18'],
+    ['Bakery', 'Galaway, Koforidua', 'HM-842-18']
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -50,195 +58,12 @@ class _HomePageState extends State<HomePage> {
                 children: <Widget>[
                   Container(
                     height: 180.0,
-                    child: ListView(
+                    child: ListView.builder(
                       scrollDirection: Axis.horizontal,
-                      children: <Widget>[
-                        Expanded(
-                          child: Container(
-                            width: 150.0,
-                            height: 150.0,
-                            margin: EdgeInsets.fromLTRB(10.0, 15.0, 5.0, 15.0),
-                            decoration: BoxDecoration(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(5.0)),
-                                color: Colors.white),
-                            child: Column(
-                              children: <Widget>[
-                                SizedBox(
-                                  height: 10.0,
-                                ),
-                                Container(
-                                  width: 50.0,
-                                  height: 50.0,
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.all(
-                                          Radius.circular(45.0)),
-                                      color: Colors.grey.shade200),
-                                  child: Image.network(""),
-                                ),
-                                SizedBox(
-                                  height: 5.0,
-                                ),
-                                Text(
-                                  'Police Service',
-                                  style: TextStyle(fontWeight: FontWeight.bold),
-                                ),
-                                SizedBox(
-                                  height: 5.0,
-                                ),
-                                Divider(
-                                  color: Colors.grey,
-                                ),
-                                SizedBox(
-                                  height: 5.0,
-                                ),
-                                InkWell(
-                                    child: Material(
-                                  color: _mainColor,
-                                  borderRadius: BorderRadius.circular(20.0),
-                                  elevation: 3.0,
-                                  child: Container(
-                                      margin: EdgeInsets.fromLTRB(
-                                          15.0, 0.0, 15.0, 0.0),
-                                      height: 30.0,
-                                      width: 100.0,
-                                      child: Align(
-                                        alignment: Alignment.center,
-                                        child: Text(
-                                          'Send Location',
-                                          softWrap: true,
-                                          style: TextStyle(color: Colors.white),
-                                        ),
-                                      )),
-                                )),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          child: Container(
-                            width: 150.0,
-                            height: 150.0,
-                            margin: EdgeInsets.fromLTRB(10.0, 15.0, 5.0, 15.0),
-                            decoration: BoxDecoration(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(5.0)),
-                                color: Colors.white),
-                            child: Column(
-                              children: <Widget>[
-                                SizedBox(
-                                  height: 10.0,
-                                ),
-                                Container(
-                                  width: 50.0,
-                                  height: 50.0,
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.all(
-                                          Radius.circular(45.0)),
-                                      color: Colors.grey.shade200),
-                                  child: Image.network(""),
-                                ),
-                                SizedBox(
-                                  height: 5.0,
-                                ),
-                                Text(
-                                  'Fire Service',
-                                  style: TextStyle(fontWeight: FontWeight.bold),
-                                ),
-                                SizedBox(
-                                  height: 5.0,
-                                ),
-                                Divider(
-                                  color: Colors.grey,
-                                ),
-                                SizedBox(
-                                  height: 5.0,
-                                ),
-                                InkWell(
-                                    child: Material(
-                                  color: _mainColor,
-                                  borderRadius: BorderRadius.circular(20.0),
-                                  elevation: 3.0,
-                                  child: Container(
-                                      margin: EdgeInsets.fromLTRB(
-                                          15.0, 0.0, 15.0, 0.0),
-                                      height: 30.0,
-                                      width: 100.0,
-                                      child: Align(
-                                        alignment: Alignment.center,
-                                        child: Text(
-                                          'Send Location',
-                                          softWrap: true,
-                                          style: TextStyle(color: Colors.white),
-                                        ),
-                                      )),
-                                )),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                            child: Container(
-                          width: 150.0,
-                          height: 150.0,
-                          margin: EdgeInsets.fromLTRB(10.0, 15.0, 5.0, 15.0),
-                          decoration: BoxDecoration(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(5.0)),
-                              color: Colors.white),
-                          child: Column(
-                            children: <Widget>[
-                              SizedBox(
-                                height: 10.0,
-                              ),
-                              Container(
-                                width: 50.0,
-                                height: 50.0,
-                                decoration: BoxDecoration(
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(45.0)),
-                                    color: Colors.grey.shade200),
-                                child: Image.network(""),
-                              ),
-                              SizedBox(
-                                height: 5.0,
-                              ),
-                              Text(
-                                'Ambulance Service',
-                                style: TextStyle(fontWeight: FontWeight.bold),
-                              ),
-                              SizedBox(
-                                height: 5.0,
-                              ),
-                              Divider(
-                                color: Colors.grey,
-                              ),
-                              SizedBox(
-                                height: 5.0,
-                              ),
-                              InkWell(
-                                  child: Material(
-                                color: _mainColor,
-                                borderRadius: BorderRadius.circular(20.0),
-                                elevation: 3.0,
-                                child: Container(
-                                    margin: EdgeInsets.fromLTRB(
-                                        15.0, 0.0, 15.0, 0.0),
-                                    height: 30.0,
-                                    width: 100.0,
-                                    child: Align(
-                                      alignment: Alignment.center,
-                                      child: Text(
-                                        'Send Location',
-                                        softWrap: true,
-                                        style: TextStyle(color: Colors.white),
-                                      ),
-                                    )),
-                              )),
-                            ],
-                          ),
-                        ))
-                      ],
+                      itemCount: _serviceName.length,
+                      itemBuilder: (context, index) {
+                        return _serviceBuildWidget("", _serviceName[index]);
+                      },
                     ),
                   ),
                   Align(
@@ -256,156 +81,20 @@ class _HomePageState extends State<HomePage> {
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.all(Radius.circular(5.0)),
                         color: Colors.white),
-                    child: Column(
-                      children: <Widget>[
-                        ListTile(
-                          title: Text(
-                            'Home',
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                          subtitle: Text('Madina Lane 5'),
-                          trailing: InkWell(
-                              child: Material(
-                            color: _mainColor,
-                            borderRadius: BorderRadius.circular(20.0),
-                            elevation: 3.0,
-                            child: Container(
-                                margin:
-                                    EdgeInsets.fromLTRB(15.0, 0.0, 15.0, 0.0),
-                                height: 30.0,
-                                width: 100.0,
-                                child: Align(
-                                  alignment: Alignment.center,
-                                  child: Text(
-                                    'GM-342-18',
-                                    softWrap: true,
-                                    style: TextStyle(color: Colors.white),
-                                  ),
-                                )),
-                          )),
-                        ),
-                        Divider(
-                          height: 5.0,
-                          color: Colors.grey.shade400,
-                        ),
-                        ListTile(
-                          title: Text(
-                            'Office',
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                          subtitle: Text('Osu Oxford Street'),
-                          trailing: InkWell(
-                              child: Material(
-                            color: _mainColor,
-                            borderRadius: BorderRadius.circular(20.0),
-                            elevation: 3.0,
-                            child: Container(
-                                margin:
-                                    EdgeInsets.fromLTRB(15.0, 0.0, 15.0, 0.0),
-                                height: 30.0,
-                                width: 100.0,
-                                child: Align(
-                                  alignment: Alignment.center,
-                                  child: Text(
-                                    'G0-832-18',
-                                    softWrap: true,
-                                    style: TextStyle(color: Colors.white),
-                                  ),
-                                )),
-                          )),
-                        ),
-                        Divider(
-                          height: 5.0,
-                          color: Colors.grey.shade400,
-                        ),
-                        ListTile(
-                          title: Text(
-                            'Hometown',
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                          subtitle: Text('Saltpond'),
-                          trailing: InkWell(
-                              child: Material(
-                            color: _mainColor,
-                            borderRadius: BorderRadius.circular(20.0),
-                            elevation: 3.0,
-                            child: Container(
-                                margin:
-                                    EdgeInsets.fromLTRB(15.0, 0.0, 15.0, 0.0),
-                                height: 30.0,
-                                width: 100.0,
-                                child: Align(
-                                  alignment: Alignment.center,
-                                  child: Text(
-                                    'GS-43842-18',
-                                    softWrap: true,
-                                    style: TextStyle(color: Colors.white),
-                                  ),
-                                )),
-                          )),
-                        ),
-                        Divider(
-                          height: 5.0,
-                          color: Colors.grey.shade400,
-                        ),
-                        ListTile(
-                          title: Text(
-                            'Church',
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                          subtitle:
-                              Text('ICGC Holy Ghost Temple, Adenta Fafraha'),
-                          trailing: InkWell(
-                              child: Material(
-                            color: _mainColor,
-                            borderRadius: BorderRadius.circular(20.0),
-                            elevation: 4.0,
-                            child: Container(
-                                margin:
-                                    EdgeInsets.fromLTRB(15.0, 0.0, 15.0, 0.0),
-                                height: 30.0,
-                                width: 100.0,
-                                child: Align(
-                                  alignment: Alignment.center,
-                                  child: Text(
-                                    'GA-11d42-18',
-                                    softWrap: true,
-                                    style: TextStyle(color: Colors.white),
-                                  ),
-                                )),
-                          )),
-                        ),
-                        Divider(
-                          height: 5.0,
-                          color: Colors.grey.shade400,
-                        ),
-                        ListTile(
-                          title: Text(
-                            'Bakery',
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                          subtitle: Text('Koforidua, galaway'),
-                          trailing: InkWell(
-                              child: Material(
-                            color: _mainColor,
-                            borderRadius: BorderRadius.circular(20.0),
-                            elevation: 4.0,
-                            child: Container(
-                                margin:
-                                    EdgeInsets.fromLTRB(15.0, 0.0, 15.0, 0.0),
-                                height: 30.0,
-                                width: 100.0,
-                                child: Align(
-                                  alignment: Alignment.center,
-                                  child: Text(
-                                    'HM-842-18',
-                                    softWrap: true,
-                                    style: TextStyle(color: Colors.white),
-                                  ),
-                                )),
-                          )),
-                        )
-                      ],
+                    child: ListView.separated(
+                      scrollDirection: Axis.vertical,
+                      shrinkWrap: true,
+                      physics: ClampingScrollPhysics(),
+                      separatorBuilder: (BuildContext context, int index) {
+                        return Divider();
+                      },
+                      itemCount: _addressDetails.length,
+                      itemBuilder: (BuildContext context, int index) {
+                        return _addressBuildWidget(
+                            _addressDetails[index][0],
+                            _addressDetails[index][1],
+                            _addressDetails[index][2]);
+                      },
                     ),
                   )
                 ],
@@ -429,6 +118,94 @@ class _HomePageState extends State<HomePage> {
                 'Scan Address',
                 style: TextStyle(color: Colors.grey.shade700, fontSize: 14.0),
               ))
+        ],
+      ),
+    );
+  }
+
+  Widget _addressBuildWidget(String place, String address, String geocode) {
+    return ListTile(
+      title: Text(
+        place,
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      subtitle: Text(address),
+      trailing: InkWell(
+          child: Material(
+        color: _mainColor,
+        borderRadius: BorderRadius.circular(20.0),
+        elevation: 3.0,
+        child: Container(
+            margin: EdgeInsets.fromLTRB(15.0, 0.0, 15.0, 0.0),
+            height: 30.0,
+            width: 100.0,
+            child: Align(
+              alignment: Alignment.center,
+              child: Text(
+                geocode,
+                softWrap: true,
+                style: TextStyle(color: Colors.white),
+              ),
+            )),
+      )),
+    );
+  }
+
+  Widget _serviceBuildWidget(String imgUrl, String service) {
+    return Container(
+      width: 150.0,
+      height: 150.0,
+      margin: EdgeInsets.fromLTRB(10.0, 15.0, 5.0, 15.0),
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.all(Radius.circular(5.0)),
+          color: Colors.white),
+      child: Column(
+        children: <Widget>[
+          SizedBox(
+            height: 10.0,
+          ),
+          Container(
+            width: 50.0,
+            height: 50.0,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(45.0)),
+                color: Colors.grey.shade200),
+            child: Image.network(imgUrl),
+          ),
+          SizedBox(
+            height: 5.0,
+          ),
+          Text(
+            service,
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
+          SizedBox(
+            height: 5.0,
+          ),
+          Divider(
+            color: Colors.grey,
+          ),
+          SizedBox(
+            height: 5.0,
+          ),
+          InkWell(
+              child: Material(
+            color: _mainColor,
+            borderRadius: BorderRadius.circular(20.0),
+            elevation: 3.0,
+            child: Container(
+                margin: EdgeInsets.fromLTRB(15.0, 0.0, 15.0, 0.0),
+                height: 30.0,
+                width: 100.0,
+                child: Align(
+                  alignment: Alignment.center,
+                  child: Text(
+                    'Send Location',
+                    softWrap: true,
+                    style: TextStyle(color: Colors.white),
+                  ),
+                )),
+          )),
         ],
       ),
     );
