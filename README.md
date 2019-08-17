@@ -7,7 +7,7 @@ an implementation of GhanaPost GPS re-design by JOSHUA GRAHAM on [Linkedin](http
 <img src="https://raw.githubusercontent.com/RegNex/ghana_post_flutter/master/screenshots/original.jpeg"/>
 
 |------|-------|
-|<img align=left src="https://raw.githubusercontent.com/RegNex/ghana_post_flutter/master/screenshots/1.png" width="400" height="800"/>|<img src="https://raw.githubusercontent.com/RegNex/ghana_post_flutter/master/screenshots/2.png" width="400" height="800"/>|
+|<img align="left" src="https://raw.githubusercontent.com/RegNex/ghana_post_flutter/master/screenshots/1.png" width="400" height="800"/>|<img src="https://raw.githubusercontent.com/RegNex/ghana_post_flutter/master/screenshots/2.png" width="400" height="800"/>|
 
 
 ## Getting Started
