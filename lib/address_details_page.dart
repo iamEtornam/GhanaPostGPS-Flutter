@@ -16,7 +16,7 @@ class _AddressDetailsPageState extends State<AddressDetailsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('asfdasd'),
+        title: Text('Home'),
         centerTitle: true,
         actions: <Widget>[
           IconButton(
@@ -49,7 +49,7 @@ Align(
 Container(
   height: 75,
   child: Center(
-    child: Text('dsdsd',style: TextStyle(
+    child: Text('GM-50D1-18',style: TextStyle(
       fontSize: 40,
       color: Colors.white,
     fontWeight: FontWeight.bold
