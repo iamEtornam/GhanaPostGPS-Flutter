@@ -3,9 +3,10 @@
 an implementation of GhanaPost GPS re-design by JOSHUA GRAHAM on [Linkedin](https://www.linkedin.com/feed/update/urn:li:activity:6497995379739488256)
 
 ## Art
+
 <img src="https://github.com/RegNex/ghana_post_flutter/blob/master/screenshots/original.jpeg"/>
-<img align="left" src="https://github.com/RegNex/ghana_post_flutter/blob/master/screenshots/1.png" width="300" height="600"/>
-<img src="https://github.com/RegNex/ghana_post_flutter/blob/master/screenshots/2.png" width="300" height="600"/>
+<img align="left" src="https://github.com/RegNex/ghana_post_flutter/blob/master/screenshots/1.png" width="300" height="600"/>||
+<img src="https://github.com/RegNex/ghana_post_flutter/blob/master/screenshots/2.png" width="300" height="600"/>|
 
 ## Getting Started
 
