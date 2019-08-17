@@ -109,16 +109,12 @@ class _HomePageState extends State<HomePage> {
                     child: ListView.separated(
                       scrollDirection: Axis.vertical,
                       shrinkWrap: true,
-                      physics: ClampingScrollPhysics(),
                       separatorBuilder: (BuildContext context, int index) {
                         return Divider();
                       },
                       itemCount: _addressDetails.length,
                       itemBuilder: (BuildContext context, int index) {
-                        return _addressBuildWidget(
-                            _addressDetails[index][0],
-                            _addressDetails[index][1],
-                            _addressDetails[index][2]);
+                        return _addressBuildWidget(_addressDetails, index);
                       },
                     ),
                   )
@@ -167,7 +163,7 @@ class _HomePageState extends State<HomePage> {
           decoration: BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(45.0)),
               color: _mainColor),
-          child: Icon(Icons.add,color: Colors.white,),
+          child: Icon(Icons.add,color: Colors.white,size: 50,),
         ),
         SizedBox(
           height: 5.0,
@@ -192,14 +188,17 @@ class _HomePageState extends State<HomePage> {
   );
   }
 
-  Widget _addressBuildWidget(String place, String address, String geocode) {
+  Widget _addressBuildWidget(var data, int index) {
     return ListTile(
       title: Text(
-        place,
+        _addressDetails[index][0],
         style: TextStyle(fontWeight: FontWeight.bold),
       ),
-      subtitle: Text(address),
+      subtitle: Text(_addressDetails[index][1]),
       trailing: InkWell(
+        onTap: (){
+          Navigator.pushNamed(context, '/addressDetilsPage', arguments: data);
+        },
           child: Material(
         color: _mainColor,
         borderRadius: BorderRadius.circular(20.0),
@@ -211,7 +210,7 @@ class _HomePageState extends State<HomePage> {
             child: Align(
               alignment: Alignment.center,
               child: Text(
-                geocode,
+                _addressDetails[index][2],
                 softWrap: true,
                 style: TextStyle(color: Colors.white),
               ),
@@ -234,12 +233,15 @@ class _HomePageState extends State<HomePage> {
             height: 10.0,
           ),
           Container(
-            width: 50.0,
-            height: 50.0,
+            width: 60.0,
+            height: 60.0,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(45.0)),
                 color: Colors.grey.shade200),
-            child: Image.asset(imgUrl,color: _mainColor,height: 45,width: 45,),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Image.asset(imgUrl,color: _mainColor,height: 40,width: 40,),
+            ),
           ),
           SizedBox(
             height: 5.0,
@@ -258,6 +260,7 @@ class _HomePageState extends State<HomePage> {
             height: 5.0,
           ),
           InkWell(
+            onTap: (){},
               child: Material(
             color: _mainColor,
             borderRadius: BorderRadius.circular(20.0),
