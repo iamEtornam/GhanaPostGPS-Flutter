@@ -9,6 +9,7 @@ class _HomePageState extends State<HomePage> {
   TextEditingController _controller = TextEditingController();
   Color _mainColor = Color(0xff0677BD);
   List<String> _serviceName = ['Police', 'Fire', 'Ambulance'];
+   List<String> _serviceIcon = ['assets/images/ic_police_man.png', 'assets/images/ic_fire_truck.png', 'assets/images/ic_ambulance.png'];
   var _addressDetails = [
     ['Home', 'Madina Lane 5', 'GM-342-18'],
     ['Office', 'Osu Oxford Street', 'GO-832-18'],
@@ -56,15 +57,60 @@ class _HomePageState extends State<HomePage> {
             itemBuilder: (context, index) {
               return Column(
                 children: <Widget>[
-                  Container(
+                  Row(
+                    children: <Widget>[
+                      Container(
+                        height: 180.0,
+                        child: ListView.builder(
+                          scrollDirection: Axis.horizontal,
+                          itemCount: _serviceName.length,
+                          itemBuilder: (context, index) {
+                            return _serviceBuildWidget(_serviceIcon[index], _serviceName[index]);
+                          },
+                        ),
+                      ),
+                        Container(
                     height: 180.0,
-                    child: ListView.builder(
-                      scrollDirection: Axis.horizontal,
-                      itemCount: _serviceName.length,
-                      itemBuilder: (context, index) {
-                        return _serviceBuildWidget("", _serviceName[index]);
-                      },
-                    ),
+                    child: Container(
+      width: 150.0,
+      height: 150.0,
+      margin: EdgeInsets.fromLTRB(10.0, 15.0, 5.0, 15.0),
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.all(Radius.circular(5.0)),
+          color: Colors.white),
+      child: Column(
+        children: <Widget>[
+          SizedBox(
+            height: 10.0,
+          ),
+          Container(
+            width: 60.0,
+            height: 60.0,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(45.0)),
+                color: Colors.grey.shade200),
+            child: Icon(Icons.add,color: Colors.white,),
+          ),
+          SizedBox(
+            height: 5.0,
+          ),
+          Divider(
+            color: Colors.grey,
+          ),
+          SizedBox(
+            height: 5.0,
+          ),
+          Text(
+                    'Add Emergency Contact',
+                    textAlign: TextAlign.center,
+                    softWrap: true,
+                    style: TextStyle(color: Colors.white),
+                  ),
+        ],
+      ),
+    ),
+                  ),
+                    ],
                   ),
                   Align(
                     alignment: Alignment.centerLeft,
@@ -170,7 +216,7 @@ class _HomePageState extends State<HomePage> {
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(45.0)),
                 color: Colors.grey.shade200),
-            child: Image.network(imgUrl),
+            child: Image.asset(imgUrl,color: _mainColor,height: 45,width: 45,),
           ),
           SizedBox(
             height: 5.0,
