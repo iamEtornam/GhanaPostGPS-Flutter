@@ -47,69 +47,48 @@ class _HomePageState extends State<HomePage> {
             preferredSize: Size.fromHeight(60.0)),
       ),
       drawer: Drawer(
-        child: ListView(),
+        child: ListView(
+          children: <Widget>[
+            Drawer(
+            )
+          ],
+        ),
       ),
       body: SafeArea(
         child: ListView.builder(
             scrollDirection: Axis.vertical,
-            physics: ClampingScrollPhysics(),
             itemCount: 1,
+            shrinkWrap: true,
             itemBuilder: (context, index) {
               return Column(
                 children: <Widget>[
-                  Row(
+                  Column(
                     children: <Widget>[
                       Container(
-                        height: 180.0,
-                        child: ListView.builder(
+                        height: 180,
+                        child: ListView(
+                          shrinkWrap: true,
                           scrollDirection: Axis.horizontal,
-                          itemCount: _serviceName.length,
-                          itemBuilder: (context, index) {
-                            return _serviceBuildWidget(_serviceIcon[index], _serviceName[index]);
-                          },
+                          children: <Widget>[
+                            Container(
+                              height: 180.0,      
+                              child: ListView.builder(
+                                shrinkWrap: true,
+                                scrollDirection: Axis.horizontal,
+                                itemCount: _serviceName.length,
+                                itemBuilder: (context, index) {
+                                  return _serviceBuildWidget(_serviceIcon[index], _serviceName[index]);
+                                },
+                              ),
+                            ),
+                                 Container(
+                    height: 180.0,
+                    child: addServiceWidget(),
+                  ),
+                   
+                          ],
                         ),
                       ),
-                        Container(
-                    height: 180.0,
-                    child: Container(
-      width: 150.0,
-      height: 150.0,
-      margin: EdgeInsets.fromLTRB(10.0, 15.0, 5.0, 15.0),
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(5.0)),
-          color: Colors.white),
-      child: Column(
-        children: <Widget>[
-          SizedBox(
-            height: 10.0,
-          ),
-          Container(
-            width: 60.0,
-            height: 60.0,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(45.0)),
-                color: Colors.grey.shade200),
-            child: Icon(Icons.add,color: Colors.white,),
-          ),
-          SizedBox(
-            height: 5.0,
-          ),
-          Divider(
-            color: Colors.grey,
-          ),
-          SizedBox(
-            height: 5.0,
-          ),
-          Text(
-                    'Add Emergency Contact',
-                    textAlign: TextAlign.center,
-                    softWrap: true,
-                    style: TextStyle(color: Colors.white),
-                  ),
-        ],
-      ),
-    ),
-                  ),
                     ],
                   ),
                   Align(
@@ -167,6 +146,50 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
     );
+  }
+
+  Container addServiceWidget() {
+    return Container(
+    width: 150.0,
+    height: 150.0,
+    margin: EdgeInsets.fromLTRB(10.0, 15.0, 5.0, 15.0),
+    decoration: BoxDecoration(
+        borderRadius: BorderRadius.all(Radius.circular(5.0)),
+        color: Colors.white),
+    child: Column(
+      children: <Widget>[
+        SizedBox(
+          height: 10.0,
+        ),
+        Container(
+          width: 60.0,
+          height: 60.0,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.all(Radius.circular(45.0)),
+              color: _mainColor),
+          child: Icon(Icons.add,color: Colors.white,),
+        ),
+        SizedBox(
+          height: 5.0,
+        ),
+        Divider(
+          color: Colors.grey,
+        ),
+        SizedBox(
+          height: 5.0,
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 10),
+          child: Text(
+                      'Add Emergency Contact',
+                      textAlign: TextAlign.center,
+                      softWrap: true,
+                      style: TextStyle(color: _mainColor),
+                  ),
+        ),
+      ],
+    ),
+  );
   }
 
   Widget _addressBuildWidget(String place, String address, String geocode) {
